@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <link rel="stylesheet" type="text/css" href="resume.css">
+</head>
+<body>
+    <div class="resume">My Resume</div>
+    <div class="infobox">
+
+        <div id= "edu0" class="littlebox" onmousedown= "down(this);" onmouseup= "up(this);">
+        Education
+      </div>
+
+        <div id= "pro0" class="littlebox" onmousedown= "down(this);" onmouseup= "up(this);">
+        Professional Experience
+      </div>
+
+        <div id= "ski0" class="littlebox" onmousedown= "down(this);" onmouseup= "up(this);">
+        Skills
+      </div>
+    </div>
+
+    <div class="biginfo">
+      <div id= "edu1">
+        <ul>
+          <li> Master of Science in Mechanical Engineering at the University of Florida
+          <li> Bachelor of Science in Mechanical Engineering at Chang Gung University
+          <li> <a href="https://www.linkedin.com/in/yutchuang/">LinkedIn</a>+
+        </ul>
+      </div>
+
+      <div id= "pro1">
+        <ul>
+          <li> Ex-intern at PChome
+          <li> Ex-intern at SHL
+        </ul>
+      </div>
+
+      <div id= "ski1">
+        <ul>
+          <li> SolidWorks
+          <li> HTML, CSS
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      function down(element){
+        element.style.color= 'red';
+        };
+
+      function up(element){
+        element.style.color= 'black';
+        };
+
+      let edu1= document.querySelector("#edu1");
+      let pro1= document.querySelector("#pro1");
+      let ski1= document.querySelector("#ski1");
+
+      function showe(){
+        edu1.style.display="block";
+        pro1.style.display= "none";
+        ski1.style.display= "none";};
+      function showp(){
+        edu1.style.display="none";
+        pro1.style.display= "block";
+        ski1.style.display= "none";};
+      function shows(){
+        edu1.style.display="none";
+        pro1.style.display= "none";
+        ski1.style.display= "block";};
+
+      edu0.addEventListener("mousedown", showe)
+      pro0.addEventListener("mousedown", showp)
+      ski0.addEventListener("mousedown", shows)
+    </script>
+</body>
+</html>
+padaLab@gmail.com

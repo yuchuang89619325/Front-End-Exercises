@@ -1,0 +1,59 @@
+.resume{
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: center;
+    font-size: 30px;
+}
+
+.infobox{
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 1100px;
+}
+.littlebox{
+    border: 2px solid black;
+    text-align: center;
+    margin: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.biginfo{
+  padding: 10px;
+  border: 1px dashed blue;
+  width: 1200px;
+  height:auto;
+  margin: auto;
+  justify-content: center ;
+  display: flex;
+
+}
+#edu1{
+  padding: 10px;
+  font-size: 15px;
+  height: auto;
+  width: 350px;
+  border: 3px solid black;
+  margin: 5px;
+}
+#pro1{
+  padding: 10px;
+  font-size: 15px;
+  height: auto;
+  width: 350px;
+  border: 3px solid black;
+  margin: 5px;
+}
+#ski1{
+  padding: 10px;
+  font-size: 15px;
+  height: auto;
+  width: 350px;
+  border: 3px solid black;
+  margin: 5px;
+}

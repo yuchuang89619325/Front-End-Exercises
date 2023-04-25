@@ -1,0 +1,109 @@
+.head{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+    padding: 30px 0px;
+    background-color: black;
+}
+
+
+/*
+排版工具的歷史
+1. <table>
+2. CSS Float (clearfix)
+3. CSS display: inline-block
+4. CSS Flexbox: 一組 CSS 關於排版的設定 (display: flex ----
+5. CSS Grid
+
+排版工具要解決的的三個問題
+1. 如何左右排列區塊型的標籤
+2. 水平對齊 (justify-content: center)
+3. 垂直對齊
+*/
+
+/*
+排版策略
+1. 寬度是重點，高度沒什麼差，因為我們會一直往下滑
+2. 解決辦法，在手機上變成垂直排列
+3. 大銀幕水平排列，換手機時變成垂直排列，這是可行的
+*/
+
+.info{
+    background-color: lightgrey;
+    display: flex;
+    /* 水平對齊方式: flex-start, center, flex-end */
+    justify-content: center;
+    /* 允許內部的區塊，在換到手機、容器寬度不夠時，
+    (我們box定義為300+10*2 = 320) 往下排列
+    */
+    flex-wrap: wrap;
+    padding: 5px;
+    height: 500px;
+}
+
+.box{
+    background-color: pink;
+    height: 300px;
+    width: 300px; margin: 15px; /*在電腦上我想看到的*/
+    padding: 0px;
+    text-align: center;
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+/* RWD 回應式設計的核心: CSS Media Query */
+/* 若銀幕的寬度小於 1280px, 套用這個區塊中的CSS設定 */
+
+/*@media (max-width: 1280px)
+{
+    .box{width: 45%;}
+} */
+
+/* justify-content: flex-start, center, flex-end */
+.box1{
+  border: 2px solid lightyellow;
+  height: 70px;
+  width: auto;
+  margin: 10px;
+  text-align: left;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.detail{
+  border: 2px dashed black;
+  line-height: 30px;
+  width: 150px;
+  margin: auto;
+  text-align: center;
+  text-decoration: underline;
+  color: black;
+  font-size: auto;
+  font-weight: bold;
+  flex-wrap: wrap;
+}
+
+.btn{
+  border: 1px solid black;
+  background-color: white;
+  padding: 5px;
+  height:13px;
+  width: 100px;
+  position: relative;
+  left: 250px;
+  flex-wrap: wrap;
+}
+
+.btn:hover{
+  background-color: gray;
+}
+
+input:focus{
+  border: 5px solid blue;
+}
+
+@media screen and (max-width: 800px){
+  .info{width: 100%; text-align: center;}
+}
